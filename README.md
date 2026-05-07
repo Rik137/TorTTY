@@ -43,13 +43,15 @@ HiddenServiceDir /var/lib/tor/ssh_hidden/
 HiddenServicePort 22 127.0.0.1:22
 ```
 4. Перезапуск
-```
+```bash
 sudo systemctl restart tor
 ```
 6. Получение onion-адреса
+```bash
 sudo cat /var/lib/tor/ssh_hidden/hostname
-👉 получаешь:
 ```
+👉 получаешь:
+```bash
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.onion
 ```
 ⚠️ Важный момент
@@ -70,9 +72,10 @@ sudo nano /etc/tor/torrcl
 UseBridges 1
 ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy
 ```
+```bash
 Bridge obfs4 77.85.159.177:7000 ...
 Bridge obfs4 207.58.153.218:48954 ...
-
+```
 SocksPort 127.0.0.1:9050  
 2. Проверка
 ss -tulnp | grep 9050
