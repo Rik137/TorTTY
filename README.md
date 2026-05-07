@@ -38,8 +38,10 @@ sudo apt install tor -y
 sudo nano /etc/tor/torrc
 ```
 Добавить:
+```bash
 HiddenServiceDir /var/lib/tor/ssh_hidden/
 HiddenServicePort 22 127.0.0.1:22
+```
 4. Перезапуск
 ```
 sudo systemctl restart tor
