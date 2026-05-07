@@ -97,7 +97,9 @@ Host myserver
     IdentityFile ~/.ssh/id_ed25519
     ObscureKeystrokeTiming no
 ### Использование
+```bash
 ssh myserver
+```
 
 
 
