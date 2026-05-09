@@ -89,10 +89,14 @@ sudo systemctl restart tor@default
 Bootstrapped 100% 
 ### Часть 3 — подключение через SOCKS
 Установка ncat
+```bash
 sudo apt install ncat -y
+```
 Команда подключения
+```bash
 ssh -o ProxyCommand="ncat --proxy 127.0.0.1:9050 --proxy-type socks5 %h %p" user@your.onion
-### Часть 4 — нормализация (чтобы не страдать)
+```
+### Часть 4 — нормализация
 ```bash
 ~/.ssh/config
 nano ~/.ssh/config
