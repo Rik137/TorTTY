@@ -86,9 +86,13 @@ ss -tulnp | grep 9050
 127.0.0.1:9050
 ```
 3. Запуск
+```bash
 sudo systemctl restart tor@default
+```
 Ждёшь:
+```bash
 Bootstrapped 100% 
+```
 ### Часть 3 — подключение через SOCKS
 Установка ncat
 ```bash
