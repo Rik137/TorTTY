@@ -93,6 +93,7 @@ sudo apt install ncat -y
 Команда подключения
 ssh -o ProxyCommand="ncat --proxy 127.0.0.1:9050 --proxy-type socks5 %h %p" user@your.onion
 ### Часть 4 — нормализация (чтобы не страдать)
+```bash
 ~/.ssh/config
 nano ~/.ssh/config
 Host myserver
@@ -101,6 +102,7 @@ Host myserver
     ProxyCommand ncat --proxy 127.0.0.1:9050 --proxy-type socks5 %h %p
     IdentityFile ~/.ssh/id_ed25519
     ObscureKeystrokeTiming no
+```
 ### Использование
 ```bash
 ssh myserver
